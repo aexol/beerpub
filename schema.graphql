@@ -1,0 +1,86 @@
+
+
+type Beer{
+	name: String!
+	SKU: String!
+	price: Int!
+}
+
+type ClientQuery{
+	beers: [Beer!]!
+}
+
+type Query{
+	clientQuery: ClientQuery!
+	pubQuery: PubQuery!
+}
+
+type Order{
+	number: Int!
+	createdAt: String!
+	orderedBeers: [OrderedBeer!]!
+}
+
+type OrderedBeer{
+	quantity: Int!
+	beer: Beer!
+}
+
+type PubQuery{
+	orders: [Order!]!
+}
+
+type PubMutation{
+	submitOrder(
+		order: SubmitOrder!
+	): Boolean
+	addBeer(
+		beer: AddBeer!
+	): Boolean
+	editBeer(
+		editBeer: EditBeer!
+		SKUInput: SKUInput!
+	): Boolean
+	removeBeer(
+		SKUInput: SKUInput!
+	): Boolean
+	cancelOrder(
+		orderDetail: OrderDetail!
+	): Boolean
+}
+
+input AddBeer{
+	name: String!
+	SKU: String!
+	price: Int!
+}
+
+input EditBeer{
+	name: String
+	price: Int
+}
+
+input SKUInput{
+	SKU: String!
+}
+
+input SubmitOrder{
+	productInOrder: [ProductInOrder!]! = []
+}
+
+input ProductInOrder{
+	SKU: String!
+	quantity: Int!
+}
+
+input OrderDetail{
+	number: Int!
+}
+
+type Mutation{
+	pubMutation: PubMutation
+}
+schema{
+	query: Query,
+	mutation: Mutation
+}

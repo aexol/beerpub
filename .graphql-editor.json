@@ -1,0 +1,13 @@
+{
+    "system": "backend",
+    "namespace": "a-team",
+    "project": "beerpub",
+    "version": "latest",
+    "typingsEnv": "node",
+    "typingsGen": "TypeScript",
+    "typingsHost": "http://localhost:8080/",
+    "typingsDir": "./src",
+    "backendSrc": "./src",
+    "backendLib": "./lib",
+    "schemaDir": "./"
+}

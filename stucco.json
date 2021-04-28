@@ -1,0 +1,59 @@
+{
+    "resolvers": {
+        "Query.clientQuery": {
+            "resolve": {
+                "name": "lib/Query/clientQuery"
+            }
+        },
+        "ClientQuery.beers": {
+            "resolve": {
+                "name": "lib/ClientQuery/beers"
+            }
+        },
+        "Mutation.pubMutation": {
+            "resolve": {
+                "name": "lib/Mutation/pubMutation"
+            }
+        },
+        "PubMutation.addBeer": {
+            "resolve": {
+                "name": "lib/PubMutation/addBeer"
+            }
+        },
+        "PubMutation.editBeer": {
+            "resolve": {
+                "name": "lib/PubMutation/editBeer"
+            }
+        },
+        "PubMutation.removeBeer": {
+            "resolve": {
+                "name": "lib/PubMutation/removeBeer"
+            }
+        },
+        "PubMutation.submitOrder": {
+            "resolve": {
+                "name": "lib/PubMutation/submitOrder"
+            }
+        },
+        "PubMutation.cancelOrder": {
+            "resolve": {
+                "name": "lib/PubMutation/cancelOrder"
+            }
+        },
+        "Query.pubQuery": {
+            "resolve": {
+                "name": "lib/Query/pubQuery"
+            }
+        },
+        "PubQuery.orders": {
+            "resolve": {
+                "name": "lib/PubQuery/orders"
+            }
+        },
+        "Order.orderedBeers": {
+            "resolve": {
+                "name": "lib/Order/orderedBeers"
+            }
+        }
+    }
+}
