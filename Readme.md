@@ -8,6 +8,8 @@ https://graphqleditor.com
 npm i -g graphql-editor-cli
 ```
 
+https://github.com/graphql-editor/graphql-editor-cli
+
 ## run
 
 ```sh
